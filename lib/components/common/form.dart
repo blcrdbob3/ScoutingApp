@@ -13,14 +13,14 @@ class Question {
 
   Question(
       {required this.id,
-        required this.title,
-        required this.type,
-        required this.icon,
-        required this.isRequired,
-        this.errorText = "This question is required",
-        this.options = const ["Default"],
-        this.minimum = 0,
-        this.maximum = 10});
+      required this.title,
+      required this.type,
+      required this.icon,
+      required this.isRequired,
+      this.errorText = "This question is required",
+      this.options = const ["Default"],
+      this.minimum = 0,
+      this.maximum = 10});
   Question.fromJson(Map<String, dynamic> data)
       : id = data['id'],
         title = data['title'],
@@ -31,7 +31,7 @@ class Question {
             ? null
             : data['errorText'] = "This question is required",
         options =
-        data['options'] == null ? null : data['options'] = ["Default"],
+            data['options'] == null ? null : data['options'] = ["Default"],
         minimum = data['minimum'] == null ? null : data['minimum'] = -1.00,
         maximum = data['maximum'] == null ? null : data['maximum'] = -1.00;
   Map<String, dynamic> toJson() {

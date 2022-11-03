@@ -38,7 +38,7 @@ class TBA {
     List<dynamic> json = await _get('event/$eventKey/teams/simple');
     List<Team> teams = json
         .map((dynamic item) => Team(
-        name: item['nickname'], number: item['team_number'], robot: {}))
+            name: item['nickname'], number: item['team_number'], robot: {}))
         .toList();
 
     return teams;
@@ -51,12 +51,12 @@ class TBA {
     List<Match> matches = json
         .where((dynamic item) => item['comp_level'] == 'qm')
         .map((dynamic item) => Match(
-        key: item['key'],
-        number: item['match_number'],
-        redAlliance: List<int>.from(item['alliances']['red']['team_keys']
-            .map((item) => int.parse(item.substring(3)))),
-        blueAlliance: List<int>.from(item['alliances']['blue']['team_keys']
-            .map((item) => int.parse(item.substring(3))))))
+            key: item['key'],
+            number: item['match_number'],
+            redAlliance: List<int>.from(item['alliances']['red']['team_keys']
+                .map((item) => int.parse(item.substring(3)))),
+            blueAlliance: List<int>.from(item['alliances']['blue']['team_keys']
+                .map((item) => int.parse(item.substring(3))))))
         .toList();
 
     return matches;

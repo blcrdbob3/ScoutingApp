@@ -38,11 +38,11 @@ class SyncClient {
     Map<String, dynamic> data = jsonDecode(body);
 
     List<Match> matches =
-    List<Match>.from(data['matches'].map((e) => Match.fromJson(e)));
+        List<Match>.from(data['matches'].map((e) => Match.fromJson(e)));
     List<Team> teams =
-    List<Team>.from(data['teams'].map((e) => Team.fromJson(e)));
+        List<Team>.from(data['teams'].map((e) => Team.fromJson(e)));
     ScoutForm? form =
-    data['form'] == null ? null : ScoutForm.fromJson(data['form']);
+        data['form'] == null ? null : ScoutForm.fromJson(data['form']);
 
     return SyncClientData(matches, teams, form);
   }

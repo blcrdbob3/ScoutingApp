@@ -47,7 +47,7 @@ paths:
       tags:
         - data
   /query:
-    parameters: []
+    parameters: [ ]
     post:
       summary: Query Scout Data
       operationId: query-data
@@ -97,7 +97,7 @@ paths:
           application/json:
             schema:
               type: object
-              properties: {}
+              properties: { }
             examples:
               example-1:
                 value:
@@ -107,7 +107,7 @@ paths:
   /brewCoffee:
     get:
       summary: Teapot
-      tags: []
+      tags: [ ]
       responses:
         '418':
           description: I'm a teapot (RFC 2324)
@@ -128,7 +128,7 @@ paths:
       operationId: brew-coffee
       description: ''
       x-internal: true
-    parameters: []
+    parameters: [ ]
   /teams/all:
     get:
       summary: Get all Teams
@@ -145,7 +145,7 @@ paths:
                   $ref: '#/components/schemas/Team'
       operationId: get-teams
       description: Retrieve a list of all teams in the database
-    parameters: []
+    parameters: [ ]
   '/teams/{number}':
     parameters:
       - schema:
@@ -232,7 +232,7 @@ paths:
           in: query
           name: team
           description: Team number
-    parameters: []
+    parameters: [ ]
   '/matches/id/{id}':
     parameters:
       - schema:
@@ -542,7 +542,7 @@ components:
         example-1:
           number: 0
           name: Team 0
-          robot: {}
+          robot: { }
       properties:
         number:
           type: integer
@@ -554,9 +554,9 @@ components:
         - number
         - name
       description: Represents an FRC team
-  examples: {}
-  requestBodies: {}
-  responses: {}
+  examples: { }
+  requestBodies: { }
+  responses: { }
 tags:
   - name: data
   - name: forms

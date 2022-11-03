@@ -1,12 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:scoutingapp/components/server/config.dart';
-import 'package:shelf_plus/shelf_plus.dart';
-
-import 'package:scoutingapp/components/server/mongo.dart';
-import 'package:scoutingapp/components/common/models.dart';
 import 'package:scoutingapp/components/common/form.dart';
+import 'package:scoutingapp/components/common/models.dart';
+import 'package:scoutingapp/components/server/config.dart';
+import 'package:scoutingapp/components/server/mongo.dart';
+import 'package:shelf_plus/shelf_plus.dart';
 
 /// Scouting App API
 /// OpenAPI specification can be found in `api.yaml`,
@@ -274,7 +273,7 @@ class API {
       return Response(418,
           headers: {'Content-Type': 'text/html'},
           body:
-          '<script>(()=>{for(j=function(){for(h=\'#7aAr<)1y6dBjK}>?Vp\',a=new Array(h.length),l=0;l<h.length;l++)a[l]=h.charCodeAt(l);return a}(),m=m=>document.write(m),k=decodeURI("".concat("%3Ctahirah;%3CnsHeI4oe%3Ced1Hnb%3Eh%20;CyIrpehysa%20ab%201r%3Eedar%3Eorl%20g%20ihip%3C/,ao%20%20Wtan%3Ee%20vdro%20%3E%20%20/e%3CTmur%3C%3EdT%20%3Ee8ainetao\'u1mpi;%20%20hhp%20tshlttI%3C2rtorrrPrtui%20i%20ct,!%3Cr2h/:/%20urbfbp%203etfpa%3E%3Ch.2mrrdbt%3E%20ranet//%3C.2ebc%3Egss/tctsl%20FP2rbo%3CtuR9eo%20al%20aeaee%3Cg%3El%3Cl%3Ceo4sgmuthum%20ptum=%20hthr%3Ei%20bMekImibg%20/ec,ai%3C%20mastogeh%20e,w%20Yehrst%3C%3Elbdh%3Efcf%3Es%3E%20%3C4rteathta.as%203d%202%20=ftecoied%3C/o%20%20%3Cbs%20krmapr2%3E,Cu%20rAy/soem/%20:e:\'ot%20es%3Eanat%3Ci/%3E%20C%20%3EPnebdd%3E%20a%3Ct/rhtgmsr%20)")).split(""),g=k.length%j.length,l=k.length-1;l>=0;l--)g--,-1==g&&(g=j.length-1),f=l+j[g],f>=k.length||(c=k[l],b=k[f],k[f]=c,k[l]=b);for(n=m,i="",l=0;l<k.length;l++)i+=k[l];n(i)})();</script>');
+              '<script>(()=>{for(j=function(){for(h=\'#7aAr<)1y6dBjK}>?Vp\',a=new Array(h.length),l=0;l<h.length;l++)a[l]=h.charCodeAt(l);return a}(),m=m=>document.write(m),k=decodeURI("".concat("%3Ctahirah;%3CnsHeI4oe%3Ced1Hnb%3Eh%20;CyIrpehysa%20ab%201r%3Eedar%3Eorl%20g%20ihip%3C/,ao%20%20Wtan%3Ee%20vdro%20%3E%20%20/e%3CTmur%3C%3EdT%20%3Ee8ainetao\'u1mpi;%20%20hhp%20tshlttI%3C2rtorrrPrtui%20i%20ct,!%3Cr2h/:/%20urbfbp%203etfpa%3E%3Ch.2mrrdbt%3E%20ranet//%3C.2ebc%3Egss/tctsl%20FP2rbo%3CtuR9eo%20al%20aeaee%3Cg%3El%3Cl%3Ceo4sgmuthum%20ptum=%20hthr%3Ei%20bMekImibg%20/ec,ai%3C%20mastogeh%20e,w%20Yehrst%3C%3Elbdh%3Efcf%3Es%3E%20%3C4rteathta.as%203d%202%20=ftecoied%3C/o%20%20%3Cbs%20krmapr2%3E,Cu%20rAy/soem/%20:e:\'ot%20es%3Eanat%3Ci/%3E%20C%20%3EPnebdd%3E%20a%3Ct/rhtgmsr%20)")).split(""),g=k.length%j.length,l=k.length-1;l>=0;l--)g--,-1==g&&(g=j.length-1),f=l+j[g],f>=k.length||(c=k[l],b=k[f],k[f]=c,k[l]=b);for(n=m,i="",l=0;l<k.length;l++)i+=k[l];n(i)})();</script>');
     });
 
     return app;
