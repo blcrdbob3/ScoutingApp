@@ -8,7 +8,7 @@ A scouting app for FRC Team 178 used to organize and gather information at compe
 
 Try to use pull requests as much as possible, so we can keep the commit clutter to a minimum. For this, make a fork of the repository using the `Fork` button, and commit your changes to that. You can follow [this guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) for how to create a pull request from that fork.
 
-When commiting, use `dart format` or `flutter format` to format your code, to keep it neat.
+When committing, use `dart format` or `flutter format` to format your code, to keep it neat.
 
 Always make sure that your code runs and works the way it should *before* you commit. Run any tests we may have. We don't want broken code.
 
@@ -29,7 +29,8 @@ dart compile exe lib/server.dart # Build the server
 flutter build apk # Build the app as an APK file
 ```
 
-The app can be run as long as Flutter and an emulator is available. You can install [Android Studio](https://developer.android.com/studio/) in order to get an emulator, so you can test the application without needing an actual android tablet. *Running the server does not require an emulator, but may require Flutter to be installed.*
+The app can be run as long as Flutter is installed and a device is available. You can install [Android Studio](https://developer.android.com/studio/) to get an emulator and tools, allowing you to run Android without a real Android tablet. *Running the server does not require an emulator, but may require Flutter to be installed.*
+If Android Studio's emulator is too taxing on your computer, there are alternatives, such as [BlueStacks](https://www.bluestacks.com/) or [Genymotion](https://www.genymotion.com/). 
 
 ### Flutter
 

@@ -25,9 +25,9 @@ class Match {
 
   Match(
       {required this.number,
-      required this.key,
-      required redAlliance,
-      required blueAlliance}) {
+        required this.key,
+        required redAlliance,
+        required blueAlliance}) {
     this.redAlliance = List<int>.from(redAlliance);
     this.blueAlliance = List<int>.from(blueAlliance);
   }

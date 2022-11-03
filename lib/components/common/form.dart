@@ -1,50 +1,62 @@
-enum InputType { boolean, multiselect, text, number }
-
-class SelectOption {
-  final String value;
-  final String label;
-
-  SelectOption({required this.value, required this.label});
-
-  SelectOption.fromJson(Map<String, dynamic> data)
-      : value = data['value'],
-        label = data['label'];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'value': value,
-      'label': label,
-    };
-  }
-}
+import 'package:flutter/cupertino.dart';
 
 class Question {
-  final String id;
-  final String title;
-  final InputType type;
-  final bool isRequired;
-  final List<SelectOption>? options;
+  String id;
+  String title;
+  String type;
+  bool isRequired;
+  String? errorText;
+  IconData icon;
+  List<String>? options;
+  double? minimum;
+  double? maximum;
 
   Question(
       {required this.id,
-      required this.title,
-      required this.type,
-      this.isRequired = false,
-      this.options});
+        required this.title,
+        required this.type,
+        required this.icon,
+        required this.isRequired,
+        this.errorText = "This question is required",
+        this.options = const ["Default"],
+        this.minimum = 0,
+        this.maximum = 10});
   Question.fromJson(Map<String, dynamic> data)
       : id = data['id'],
         title = data['title'],
-        type = InputType.values.byName(data['type']),
-        isRequired = data['required'] ?? false,
-        options = data['options'] == null
+        type = data['type'],
+        icon = data['icon'],
+        isRequired = data['isRequired'] ?? false,
+        errorText = data['errorText'] == null
             ? null
-            : List<SelectOption>.from(
-                data['options'].map((option) => SelectOption.fromJson(option)));
-
+            : data['errorText'] = "This question is required",
+        options =
+        data['options'] == null ? null : data['options'] = ["Default"],
+        minimum = data['minimum'] == null ? null : data['minimum'] = -1.00,
+        maximum = data['maximum'] == null ? null : data['maximum'] = -1.00;
   Map<String, dynamic> toJson() {
-    Map<String, dynamic> data = {'id': id, 'title': title, 'type': type.name};
-    if (options != null) {
-      data['options'] = options?.map(((e) => e.toJson())).toList();
+    Map<String, dynamic> data = {
+      'id': id,
+      'title': title,
+      'type': type,
+      'icon': icon,
+      'isRequired': isRequired,
+      'errorText': errorText,
+      'options': options,
+      'minimum': minimum,
+      'maximum': maximum,
+    };
+    if (options == ["Default"]) {
+      data['options'] == null;
+    }
+    if (errorText == "This question is required") {
+      data['errorText'] == null;
+    }
+    if (minimum == -1.00) {
+      data['minimum'] == null;
+    }
+    if (maximum == -1.00) {
+      data['maximum'] == null;
     }
     return data;
   }

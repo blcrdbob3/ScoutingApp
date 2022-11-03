@@ -1,13 +1,13 @@
 ::  BS (Build Script)
-::  Yes, a very creative name
+::  Yes, a very creative name.
 ::  A build script to make running, debugging, and building
 ::  this project easier.
 
 @echo off
 
-:: Checking if dart and flutter are installed and accessable via command line
-where /q dart || ECHO Could not find dart. Check to make sure it's installed and accessable via the command line. && EXIT /B
-where /q flutter || ECHO Could not find flutter. Check to make sure it's installed and accessable via the command line. && EXIT /B
+:: Checking if dart and flutter are installed and accessible via command line
+where /q dart || ECHO Could not find dart. Check to make sure it's installed and accessible via the command line. && EXIT /B
+where /q flutter || ECHO Could not find flutter. Check to make sure it's installed and accessible via the command line. && EXIT /B
 
 set action=%1
 set target=%2
@@ -43,7 +43,7 @@ if "%action%" == "build" (
         dart compile exe lib/server.dart
         if not exist "build/server" (mkdir "build/server" 2>nul)
         move /y "lib/server.exe" "build/server" 2>nul
-        echo Build complete. 'lib/server.exe' moved to 'build/server'. 
+        echo Build complete. 'lib/server.exe' moved to 'build/server'.
         exit 0
     )
     if "%target%" == "app" (
